@@ -3,3 +3,115 @@
 
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
+
+/* stylelint-disable selector-class-pattern */
+
+.apricot-top-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #FF7F50; /* #F3D35A #333 #EBB12A*/
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-image: url('./apricot-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.success-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.success-circle i {
+  font-size: 50px;
+  color: white;
+}
+
+.success-container p {
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+}
+  
+/* Styles for the dialog */
+.dialog-content {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styles for the table */
+.deployments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.deployments-table th, .deployments-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.deployments-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.deployments-table tr:hover {
+  background-color: #ddd;
+}
+
+.deployments-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #dd9f48;
+  color: white;
+}
