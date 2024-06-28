@@ -15,7 +15,8 @@ import { ButtonExtension } from './buttons';
  */
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'apricot:plugin',
-  description: 'Advanced Platform for Reproducible Infrastructure in the Cloud via Open Tools.',
+  description:
+    'Advanced Platform for Reproducible Infrastructure in the Cloud via Open Tools.',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
     console.log('JupyterLab extension APRICOT is activated!');
@@ -33,9 +34,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
     // Add the widget to the top area of JupyterLab interface
     app.shell.add(widget, 'top', { rank: 1000 });
 
-    let buttonExtension = new ButtonExtension();
+    const buttonExtension = new ButtonExtension();
     app.docRegistry.addWidgetExtension('Notebook', buttonExtension);
-
   }
 };
 
